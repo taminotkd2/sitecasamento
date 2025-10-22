@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline & Tamino</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+    /* Configuração das fontes personalizadas */
+    .font-serif {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .font-sans {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    /* Overlay escuro para o hero */
+    .hero-overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    }
+    
+    /* Efeito hover nos botões */
+    .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Filtro grayscale para imagens */
+    .grayscale-img {
+        filter: grayscale(100%);
+    }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- SECÇÃO HERO -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Imagem de fundo em preto e branco -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://placehold.co/1920x1080/cccccc/666666?text=Caroline+%26+Tamino" 
+                 alt="Casal" 
+                 class="w-full h-full object-cover grayscale-img">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        
+        <!-- Conteúdo principal -->
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="font-serif text-6xl md:text-8xl font-light mb-6 tracking-wide">
+                Caroline & Tamino
+            </h1>
+            <p class="font-sans text-xl md:text-2xl mb-8 tracking-widest uppercase">
+                28 de Fevereiro de 2026
+            </p>
+            <a href="#rsvp" class="inline-block bg-white text-black px-8 py-4 font-sans font-medium tracking-wide uppercase transition-all duration-300 btn-hover hover:bg-gray-100">
+                Confirmar Presença
+            </a>
+        </div>
+        
+        <!-- Seta para baixo -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECÇÃO NOSSA HISTÓRIA -->
+    <section id="historia" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-5xl md:text-6xl text-center mb-16 text-black">
+                Nossa História
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Imagem do casal -->
+                <div class="order-2 md:order-1">
+                    <img src="https://i.imgur.com/kxA2BcA.png" 
+                         alt="Casal" 
+                         class="w-full h-auto object-cover grayscale-img shadow-lg">
+                </div>
+                
+                <!-- Texto da história -->
+                <div class="order-1 md:order-2">
+                    <p class="text-lg md:text-xl leading-relaxed mb-6 text-gray-700">
+                        Tudo começou em São Carlos da forma mais inesperada (e fofa) possível: por causa de uma
+                        cachorrinha! Uma simples resposta a uma foto nos Stories do Instagram foi o "oi" que deu início a tudo,
+                        nos levando ao nosso primeiro encontro e ao começo de uma vida que mal sabíamos que
+                        construiríamos juntos.
+                    </p>
+                    <p class="text-lg md:text-xl leading-relaxed mb-6 text-gray-700">
+                        De lá para cá, os anos passaram voando e não nos separamos mais. Construímos nossa parceria e
+                        cumplicidade entre idas a bares, festas com os amigos, muitas aventuras na cozinha e o gosto um tanto
+                        peculiar por maratonar milhares de filmes ruins no sofá. Cada dia fortalecendo o nosso amor e a certeza
+                        de que queríamos passar o resto da vida juntos.
+                    </p>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+                        Agora, em um novo capítulo, estamos prontos para o próximo grande passo.
+                        Sentimos que chegou o momento de celebrar e sacramentar essa união que começou de um jeito tão
+                        improvável. Mal podemos esperar para comemorar esse dia tão especial com todas as pessoas que
+                        mais amamos!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECÇÃO DETALHES DO EVENTO -->
+<section id="detalhes" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="font-serif text-5xl md:text-6xl text-center mb-16 text-black">
+            Detalhes do Evento
+        </h2>
+        
+        <div class="flex justify-center">
+            <!-- Cerimónia -->
+            <div class="bg-white p-8 shadow-lg border border-gray-200 max-w-lg w-full">
+                <h3 class="font-serif text-3xl mb-6 text-black">Cerimónia</h3>
+                <div class="space-y-4 text-gray-700">
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold">Data</p>
+                            <p>28 de Fevereiro de 2026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold">Hora</p>
+                            <p>15:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold">Local</p>
+                            <p>Buffet Kasa de Campo</p>
+                            <p class="text-sm">Alameda dos Palmeiras - Residencial Iporão</p>
+                            <p class="text-sm">Mairiporã - SP, 07600-000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://google.com/maps/place/Buffet+Kasa+de+Campo/@-23.3141767,-46.5603781,17z/data=!4m6!3m5!1s0x94ceed5ed19998ad:0x3aa54957bdccb4d!8m2!3d-23.3141767!4d-46.5603781!16s%2Fg%2F11q1sbrqtk?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" 
+                   target="_blank"
+                   class="mt-6 block w-full text-center bg-black text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                    Ver no Mapa
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SECÇÃO RSVP -->
+    <section id="rsvp" class="py-20 px-4 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-5xl md:text-6xl text-center mb-8 text-black">
+                Confirme a sua Presença
+            </h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">
+                A sua presença é muito importante para nós. Por favor, confirme até 20 de Dezembro de 2025.
+            </p>
+            
+            <form id="rsvpForm" class="bg-gray-50 p-8 md:p-12 shadow-lg border border-gray-200">
+                <div class="mb-6">
+                    <label for="nome" class="block text-sm font-semibold mb-2 text-gray-800 uppercase tracking-wide">
+                        Nome Completo *
+                    </label>
+                    <input type="text" 
+                           id="nome" 
+                           name="nome" 
+                           required
+                           class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition-colors">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-semibold mb-2 text-gray-800 uppercase tracking-wide">
+                        E-mail *
+                    </label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           required
+                           class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition-colors">
+                </div>
+                
+                <div class="mb-8">
+                    <label class="block text-sm font-semibold mb-3 text-gray-800 uppercase tracking-wide">
+                        Irá comparecer? *
+                    </label>
+                    <div class="space-y-3">
+                        <label class="flex items-center cursor-pointer">
+                            <input type="radio" 
+                                   name="comparecer" 
+                                   value="sim" 
+                                   required
+                                   class="w-5 h-5 text-black border-gray-300 focus:ring-black">
+                            <span class="ml-3 text-gray-700">Sim, estarei presente!</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer">
+                            <input type="radio" 
+                                   name="comparecer" 
+                                   value="nao" 
+                                   required
+                                   class="w-5 h-5 text-black border-gray-300 focus:ring-black">
+                            <span class="ml-3 text-gray-700">Infelizmente não poderei comparecer</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" 
+                        class="w-full bg-black text-white py-4 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                    Enviar Confirmação
+                </button>
+                
+                <!-- Mensagem de sucesso -->
+                <div id="rsvpSuccess" class="hidden mt-6 p-4 bg-gray-100 border-l-4 border-black">
+                    <p class="text-gray-800 font-medium">✓ Obrigado! Sua confirmação foi registada com sucesso.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+<!-- SECÇÃO LISTA DE PRESENTES -->
+<section id="presentes" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="font-serif text-5xl md:text-6xl text-center mb-8 text-black">
+            Lista de Presentes
+        </h2>
+        <p class="text-center text-gray-600 mb-16 text-lg max-w-2xl mx-auto">
+            A sua presença é o nosso maior presente! Mas se desejar contribuir para nossa nova vida, 
+            escolha um dos presentes abaixo.
+        </p>
+        
+        <!-- Grid de Presentes - AJUSTADO PARA 4 COLUNAS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            
+            <!-- Presente 1 -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Passagens+Aereas" 
+                     alt="Passagens Aéreas" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Passagens Aéreas da Lua de Mel</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 2.000,00</p>
+                    <button onclick="selecionarPresente('Passagens Aéreas da Lua de Mel', 2000.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Presente 2 -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Diaria+Hotel" 
+                     alt="Diária no Hotel" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Diária no Hotel</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 750,00</p>
+                    <button onclick="selecionarPresente('Diária no Hotel', 750.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Presente 3 -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Jantar+Romantico" 
+                     alt="Jantar Romântico" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Jantar Romântico na Lua de Mel</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 300,00</p>
+                    <button onclick="selecionarPresente('Jantar Romântico na Lua de Mel', 300.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Presente 4 -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Passeio+Barco" 
+                     alt="Passeio de Barco" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Passeio de Barco</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 500,00</p>
+                    <button onclick="selecionarPresente('Passeio de Barco', 500.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 5 - Cota para o Enxoval -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Enxoval" 
+                     alt="Cota Enxoval" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Cota para o Enxoval</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 75,00</p>
+                    <button onclick="selecionarPresente('Cota para o Enxoval (Cama, Mesa e Banho)', 75.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 6 - Conjunto de Panelas -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Panelas" 
+                     alt="Conjunto de Panelas" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Conjunto de Panelas MasterChef</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 250,00</p>
+                    <button onclick="selecionarPresente('Conjunto de Panelas MasterChef', 250.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 7 - Plantinha -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Planta" 
+                     alt="Plantinha para Casa" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Plantinha para a Casa</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 50,00</p>
+                    <button onclick="selecionarPresente('Plantinha para a Casa', 50.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 8 - Cota Decoração -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Decoracao" 
+                     alt="Cota Decoração" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Cota para Decoração dos Sonhos</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 125,00</p>
+                    <button onclick="selecionarPresente('Cota para a Decoração dos Sonhos', 125.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 9 - SPA -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=SPA" 
+                     alt="Dia de SPA" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Um Dia de SPA na Lua de Mel</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 450,00</p>
+                    <button onclick="selecionarPresente('Um Dia de SPA na Lua de Mel', 450.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 10 - Carro Conversível -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Carro" 
+                     alt="Aluguel de Carro" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Aluguel de Carro Conversível</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 500,00</p>
+                    <button onclick="selecionarPresente('Aluguel de um Carro Conversível (por um dia!)', 500.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 11 - Fundo de Emergência -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Emergencia" 
+                     alt="Fundo de Emergência" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Fundo de Emergência "Quebrei, e agora?"</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 80,00</p>
+                    <button onclick="selecionarPresente('Fundo de Emergência Quebrei, e agora?', 80.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 12 - Streaming -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Streaming" 
+                     alt="Assinatura Streaming" 
+                     class="w-full h-48 object-cover grayscale-img">
+                <div class="p-6">
+                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Assinatura de Streaming (1 Ano)</h3>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 180,00</p>
+                    <button onclick="selecionarPresente('Um Ano de Assinatura de Streaming', 180.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Área de Pagamento PIX -->
+        <div id="areaPix" class="bg-white p-8 md:p-12 shadow-lg border border-gray-200 max-w-2xl mx-auto">
+            <!-- Presente Selecionado -->
+            <div id="presenteSelecionado" class="hidden mb-8 p-4 bg-gray-100 border-l-4 border-black">
+                <p class="text-sm uppercase tracking-wide text-gray-600 mb-1 font-semibold">Presente Selecionado</p>
+                <p id="nomePresente" class="text-xl font-serif text-black mb-1"></p>
+                <p id="valorPresente" class="text-2xl font-bold text-black"></p>
+            </div>
+            
+            <h3 class="font-serif text-3xl mb-6 text-black text-center">Contribua via PIX</h3>
+            
+            <!-- QR Code -->
+            <div class="mb-6">
+                <img src="https://placehold.co/200x200/cccccc/666666?text=QR+Code+PIX" 
+                     alt="QR Code PIX" 
+                     class="mx-auto grayscale-img">
+            </div>
+            
+            <!-- Chave PIX -->
+            <div class="mb-6">
+                <p class="text-sm uppercase tracking-wide text-gray-600 mb-2 font-semibold text-center">Chave PIX (Celular)</p>
+                <p id="chavePix" class="text-2xl font-mono text-black mb-4 text-center">11957778291</p>
+                
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="copiarPix" 
+                            class="flex-1 bg-black text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Copiar Chave PIX
+                    </button>
+                    
+                    <button id="copiarValor" 
+                            class="hidden flex-1 bg-gray-800 text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-700">
+                        Copiar Valor
+                    </button>
+                </div>
+                
+                <!-- Mensagens de copiado -->
+                <p id="pixCopiado" class="hidden mt-3 text-green-700 font-medium text-center">✓ Chave PIX copiada!</p>
+                <p id="valorCopiado" class="hidden mt-3 text-green-700 font-medium text-center">✓ Valor copiado!</p>
+            </div>
+            
+            <p class="text-sm text-gray-600 italic text-center mb-8">
+                Qualquer valor será recebido com muito carinho ♥
+            </p>
+            
+            <!-- Enviar Comprovante -->
+            <div class="border-t border-gray-200 pt-8">
+                <h4 class="font-serif text-2xl mb-4 text-black text-center">Enviar Comprovante (Opcional)</h4>
+                <p class="text-sm text-gray-600 mb-6 text-center">
+                    Se desejar, pode enviar o comprovante da sua transferência
+                </p>
+                
+                <div class="text-center">
+                    <label for="fileUpload" class="inline-block bg-gray-800 text-white py-3 px-8 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-700 cursor-pointer">
+                        <svg class="inline-block w-5 h-5 mr-2 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                        </svg>
+                        Anexar Comprovante
+                    </label>
+                    <input type="file" 
+                           id="fileUpload" 
+                           accept="image/*,application/pdf" 
+                           class="hidden"
+                           onchange="mostrarNomeArquivo(this)">
+                    
+                    <p id="nomeArquivo" class="mt-4 text-sm text-gray-600 italic"></p>
+                    <p id="arquivoSucesso" class="hidden mt-4 text-green-700 font-medium">✓ Comprovante anexado com sucesso!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- SECÇÃO MURAL DE MENSAGENS -->
+<section id="mensagens" class="py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="font-serif text-5xl md:text-6xl text-center mb-8 text-black">
+            Deixe uma Mensagem
+        </h2>
+        <p class="text-center text-gray-600 mb-12 text-lg">
+            Partilhe os seus votos de felicidade e carinho connosco!
+        </p>
+        
+        <form id="mensagemForm" class="bg-gray-50 p-8 md:p-12 shadow-lg border border-gray-200 mb-12">
+            <div class="mb-6">
+                <label for="nomeMsg" class="block text-sm font-semibold mb-2 text-gray-800 uppercase tracking-wide">
+                    Seu Nome *
+                </label>
+                <input type="text" 
+                       id="nomeMsg" 
+                       name="nomeMsg" 
+                       required
+                       class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition-colors">
+            </div>
+            
+            <div class="mb-6">
+                <label for="mensagem" class="block text-sm font-semibold mb-2 text-gray-800 uppercase tracking-wide">
+                    Sua Mensagem *
+                </label>
+                <textarea id="mensagem" 
+                          name="mensagem" 
+                          rows="5" 
+                          required
+                          placeholder="Escreva aqui os seus votos de felicidade..."
+                          class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition-colors resize-none"></textarea>
+            </div>
+            
+            <button type="submit" 
+                    class="w-full bg-black text-white py-4 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                Enviar Mensagem
+            </button>
+            
+            <!-- Mensagem de sucesso -->
+            <div id="msgSuccess" class="hidden mt-6 p-4 bg-gray-100 border-l-4 border-black">
+                <p class="text-gray-800 font-medium">✓ Obrigado pela sua mensagem carinhosa!</p>
+            </div>
+        </form>
+        
+        <!-- Exemplo de mensagens (opcional) -->
+        <div class="space-y-6">
+            <div class="bg-gray-50 p-6 border-l-4 border-gray-300">
+                <p class="text-gray-700 italic mb-2">"Que esta união seja abençoada com muito amor e felicidade!"</p>
+                <p class="text-sm text-gray-500 font-semibold">— Maria Silva</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 border-l-4 border-gray-300">
+                <p class="text-gray-700 italic mb-2">"Desejamos a vocês uma vida repleta de amor, cumplicidade e realizações!"</p>
+                <p class="text-sm text-gray-500 font-semibold">— João e Rita Santos</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SECÇÃO GALERIA DE FOTOS -->
+    <section id="galeria" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-5xl md:text-6xl text-center mb-16 text-black">
+                Galeria
+            </h2>
+            
+            <!-- Grid de fotos -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+1" 
+                         alt="Foto 1" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+                
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+2" 
+                         alt="Foto 2" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+                
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+3" 
+                         alt="Foto 3" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+                
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+4" 
+                         alt="Foto 4" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+                
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+5" 
+                         alt="Foto 5" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+                
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+6" 
+                         alt="Foto 6" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+                
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+7" 
+                         alt="Foto 7" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+                
+                <div class="overflow-hidden aspect-square">
+                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+8" 
+                         alt="Foto 8" 
+                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-black text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="font-serif text-4xl mb-4">Caroline & Tamino</h3>
+            <p class="text-gray-400 mb-6">28 de Fevereiro de 2026</p>
+            <p class="text-gray-400 text-sm">
+                Feito com ♥ para o nosso dia especial
+            </p>
+        </div>
+    </footer>
+
+<!-- JAVASCRIPT -->
+<script>
+    // ========================================
+    // SCROLL SUAVE PARA ÂNCORAS
+    // ========================================
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+// ========================================
+// FORMULÁRIO RSVP (COM GOOGLE SHEETS)
+// ========================================
+
+const rsvpForm = document.getElementById('rsvpForm');
+const rsvpSuccess = document.getElementById('rsvpSuccess');
+
+const SCRIPT_URL2 = 'https://script.google.com/macros/s/AKfycbxfrM3AZ0qv1fdupoO0vF4bFTC-mSJv7UWcax3Xn6y3ycDpZcss2at8zAOORpIb7_l6/exec';
+
+rsvpForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const comparecer = document.querySelector('input[name="comparecer"]:checked').value;
+    
+    const btnEnviar = rsvpForm.querySelector('button[type="submit"]');
+    const textoOriginal = btnEnviar.textContent;
+    btnEnviar.textContent = 'Enviando...';
+    btnEnviar.disabled = true;
+    
+    fetch(SCRIPT_URL2, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            tipo: 'rsvp',
+            nome: nome,
+            email: email,
+            comparecer: comparecer === 'sim' ? 'Sim' : 'Não'
+        })
+    })
+    .then(() => {
+        rsvpSuccess.classList.remove('hidden');
+        
+        setTimeout(() => {
+            rsvpForm.reset();
+            btnEnviar.textContent = textoOriginal;
+            btnEnviar.disabled = false;
+            
+            setTimeout(() => {
+                rsvpSuccess.classList.add('hidden');
+            }, 3000);
+        }, 2000);
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao enviar confirmação. Tente novamente.');
+        btnEnviar.textContent = textoOriginal;
+        btnEnviar.disabled = false;
+    });
+});
+    
+    // ========================================
+    // SELECIONAR PRESENTE
+    // ========================================
+    
+    let valorPresenteSelecionado = 0;
+    
+    function selecionarPresente(nome, valor) {
+        valorPresenteSelecionado = valor;
+        
+        // Mostrar área de presente selecionado
+        document.getElementById('presenteSelecionado').classList.remove('hidden');
+        document.getElementById('nomePresente').textContent = nome;
+        document.getElementById('valorPresente').textContent = `R$ ${valor.toFixed(2).replace('.', ',')}`;
+        
+        // Mostrar botão de copiar valor
+        document.getElementById('copiarValor').classList.remove('hidden');
+        
+        // Rolar suavemente até a área PIX
+        document.getElementById('areaPix').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+    
+    // ========================================
+    // COPIAR CHAVE PIX
+    // ========================================
+    
+    const copiarPixBtn = document.getElementById('copiarPix');
+    const pixCopiado = document.getElementById('pixCopiado');
+    const chavePix = '11957778291';
+    
+    copiarPixBtn.addEventListener('click', function() {
+        // Copiar para área de transferência
+        navigator.clipboard.writeText(chavePix).then(() => {
+            // Esconder mensagem de valor copiado
+            document.getElementById('valorCopiado').classList.add('hidden');
+            
+            // Mostrar mensagem de sucesso
+            pixCopiado.classList.remove('hidden');
+            
+            // Mudar texto do botão temporariamente
+            const textoOriginal = copiarPixBtn.textContent;
+            copiarPixBtn.textContent = 'Copiado!';
+            
+            // Resetar após 3 segundos
+            setTimeout(() => {
+                pixCopiado.classList.add('hidden');
+                copiarPixBtn.textContent = textoOriginal;
+            }, 3000);
+        }).catch(err => {
+            alert('Erro ao copiar. Por favor, copie manualmente: ' + chavePix);
+        });
+    });
+    
+    // ========================================
+    // COPIAR VALOR DO PRESENTE
+    // ========================================
+    
+    const copiarValorBtn = document.getElementById('copiarValor');
+    const valorCopiado = document.getElementById('valorCopiado');
+    
+    copiarValorBtn.addEventListener('click', function() {
+        if (valorPresenteSelecionado > 0) {
+            // Formatar valor para copiar (apenas números com ponto decimal)
+            const valorFormatado = valorPresenteSelecionado.toFixed(2);
+            
+            // Copiar para área de transferência
+            navigator.clipboard.writeText(valorFormatado).then(() => {
+                // Esconder mensagem de PIX copiado
+                pixCopiado.classList.add('hidden');
+                
+                // Mostrar mensagem de sucesso
+                valorCopiado.classList.remove('hidden');
+                
+                // Mudar texto do botão temporariamente
+                const textoOriginal = copiarValorBtn.textContent;
+                copiarValorBtn.textContent = 'Copiado!';
+                
+                // Resetar após 3 segundos
+                setTimeout(() => {
+                    valorCopiado.classList.add('hidden');
+                    copiarValorBtn.textContent = textoOriginal;
+                }, 3000);
+            }).catch(err => {
+                alert('Erro ao copiar. Por favor, copie manualmente: ' + valorFormatado);
+            });
+        }
+    });
+    
+    // ========================================
+    // UPLOAD DE COMPROVANTE
+    // ========================================
+    
+    function mostrarNomeArquivo(input) {
+        const nomeArquivoElement = document.getElementById('nomeArquivo');
+        const arquivoSucessoElement = document.getElementById('arquivoSucesso');
+        
+        if (input.files && input.files[0]) {
+            const nomeArquivo = input.files[0].name;
+            nomeArquivoElement.textContent = `Ficheiro selecionado: ${nomeArquivo}`;
+            
+            // Mostrar mensagem de sucesso
+            arquivoSucessoElement.classList.remove('hidden');
+            
+            // Esconder mensagem após 5 segundos
+            setTimeout(() => {
+                arquivoSucessoElement.classList.add('hidden');
+            }, 5000);
+        } else {
+            nomeArquivoElement.textContent = '';
+            arquivoSucessoElement.classList.add('hidden');
+        }
+    }
+    
+// ========================================
+// FORMULÁRIO DE MENSAGENS (COM GOOGLE SHEETS)
+// ========================================
+
+const mensagemForm = document.getElementById('mensagemForm');
+const msgSuccess = document.getElementById('msgSuccess');
+
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxOpGlhG9teeyXlQmGBYHdMEgo8fZNIh25CIiK2qdxW9A0Giex1eZOxoPKUgfH5geo7/exec';
+
+mensagemForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Pegar dados do formulário
+    const nome = document.getElementById('nomeMsg').value;
+    const mensagem = document.getElementById('mensagem').value;
+    
+    // Desabilitar botão enquanto envia
+    const btnEnviar = mensagemForm.querySelector('button[type="submit"]');
+    const textoOriginal = btnEnviar.textContent;
+    btnEnviar.textContent = 'Enviando...';
+    btnEnviar.disabled = true;
+    
+    // Enviar para Google Sheets
+    fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            nome: nome,
+            mensagem: mensagem
+        })
+    })
+    .then(() => {
+        // Mostrar mensagem de sucesso
+        msgSuccess.classList.remove('hidden');
+        
+        // Limpar formulário
+        mensagemForm.reset();
+        
+        // Reabilitar botão
+        btnEnviar.textContent = textoOriginal;
+        btnEnviar.disabled = false;
+        
+        // Esconder mensagem após 3 segundos
+        setTimeout(() => {
+            msgSuccess.classList.add('hidden');
+        }, 3000);
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao enviar mensagem. Tente novamente.');
+        btnEnviar.textContent = textoOriginal;
+        btnEnviar.disabled = false;
+    });
+});
+    
+</script>
+
+</body>
+</html>
