@@ -14,6 +14,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
+
+    /* Animação de fade in para os presentes */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Estado inicial dos lotes ocultos */
+    .presente-lote-1.hidden,
+    .presente-lote-2.hidden {
+        display: none;
+        opacity: 0;
+    }
+
+    /* Estado visível dos lotes */
+    .presente-lote-1:not(.hidden),
+    .presente-lote-2:not(.hidden) {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Transição suave para o botão Ver Mais */
+    #verMaisPresentes {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
     /* Configuração das fontes personalizadas */
     .font-serif {
         font-family: 'Cormorant Garamond', serif;
@@ -239,7 +270,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             
             <!-- Presente 1-->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Kit+Sobrevivencia" 
                     alt="Kit Sobrevivência a Dois" 
                     class="w-full h-48 object-cover">
@@ -259,7 +290,7 @@
             </div>
             
             <!-- Presente 2 - Noite do Filme -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Noite+Filme" 
                     alt="Noite do Filme + Pijama" 
                     class="w-full h-48 object-cover">
@@ -279,7 +310,7 @@
             </div>
 
             <!-- Presente 3 - Máquina de Café -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Maquina+Cafe" 
                     alt="Máquina de Café" 
                     class="w-full h-48 object-cover">
@@ -299,7 +330,7 @@
             </div>
 
             <!-- Presente 4 - Jogo de Taças -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Tacas" 
                     alt="Jogo de Taças" 
                     class="w-full h-48 object-cover">
@@ -319,7 +350,7 @@
             </div>
 
             <!-- Presente 5 - Aula de Dança -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Danca" 
                     alt="Aula de Dança" 
                     class="w-full h-48 object-cover">
@@ -339,7 +370,7 @@
             </div>
 
             <!-- Presente 6 - Streaming + Pipoca -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Streaming" 
                     alt="Assinatura Streaming" 
                     class="w-full h-48 object-cover">
@@ -359,7 +390,7 @@
             </div>
 
             <!-- Presente 7 - Sessão de Massagem -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Massagem" 
                     alt="Sessão de Massagem" 
                     class="w-full h-48 object-cover">
@@ -379,7 +410,7 @@
             </div>
 
             <!-- Presente 8 - Lençóis Egípcios -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-visivel bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Lencois" 
                     alt="Jogo de Lençóis" 
                     class="w-full h-48 object-cover">
@@ -399,7 +430,7 @@
             </div>
 
             <!-- Presente 9 - Kit Café na Cama -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Cafe+Cama" 
                     alt="Kit Café na Cama" 
                     class="w-full h-48 object-cover">
@@ -419,7 +450,7 @@
             </div>
 
             <!-- Presente 10 - Robô Aspirador -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Robo" 
                     alt="Robô Aspirador" 
                     class="w-full h-48 object-cover">
@@ -439,7 +470,7 @@
             </div>
 
             <!-- Presente 11 - Jogo de Panelas -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Panelas" 
                     alt="Jogo de Panelas" 
                     class="w-full h-48 object-cover">
@@ -459,7 +490,7 @@
             </div>
 
             <!-- Presente 12 - Curso de Drinks -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Drinks" 
                     alt="Curso de Drinks" 
                     class="w-full h-48 object-cover">
@@ -478,7 +509,7 @@
                 </div>
             </div>
             <!-- Presente 13 - Vale Viagem -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Viagem" 
                     alt="Vale Viagem" 
                     class="w-full h-48 object-cover">
@@ -498,7 +529,7 @@
             </div>
 
             <!-- Presente 14 - Máquina de Waffle -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Waffle" 
                     alt="Máquina de Waffle" 
                     class="w-full h-48 object-cover">
@@ -518,7 +549,7 @@
             </div>
 
             <!-- Presente 15 - Jogo Desafio do Casal -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Jogo+Casal" 
                     alt="Jogo Desafio do Casal" 
                     class="w-full h-48 object-cover">
@@ -538,7 +569,7 @@
             </div>
 
             <!-- Presente 16 - Toalhas Bordadas -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Toalhas" 
                     alt="Toalhas Bordadas" 
                     class="w-full h-48 object-cover">
@@ -558,7 +589,7 @@
             </div>
 
             <!-- Presente 17 - Câmera Instantânea -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Camera" 
                     alt="Câmera Instantânea" 
                     class="w-full h-48 object-cover">
@@ -577,7 +608,7 @@
                 </div>
             </div>
             <!-- Presente 18 - Luminária Inteligente -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Luminaria" 
                     alt="Luminária Inteligente" 
                     class="w-full h-48 object-cover">
@@ -597,7 +628,7 @@
             </div>
 
             <!-- Presente 19 - Primeiro Jantar -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Jantar" 
                     alt="Primeiro Jantar em Casa" 
                     class="w-full h-48 object-cover">
@@ -617,7 +648,7 @@
             </div>
 
             <!-- Presente 20 - Tapete -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Tapete" 
                     alt="Tapete Bem-vindo" 
                     class="w-full h-48 object-cover">
@@ -637,7 +668,7 @@
             </div>
 
             <!-- Presente 21 - Difusor de Aromas -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Difusor" 
                     alt="Difusor de Aromas" 
                     class="w-full h-48 object-cover">
@@ -657,7 +688,7 @@
             </div>
 
             <!-- Presente 22 - Mini Projetor -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Projetor" 
                     alt="Mini Projetor" 
                     class="w-full h-48 object-cover">
@@ -677,7 +708,7 @@
             </div>
 
             <!-- Presente 23 - Vale Pizza -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Pizza" 
                     alt="Vale Pizza" 
                     class="w-full h-48 object-cover">
@@ -697,7 +728,7 @@
             </div>
 
             <!-- Presente 24 - Pratos Irônicos -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-1 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Pratos" 
                     alt="Pratos com Frases" 
                     class="w-full h-48 object-cover">
@@ -717,7 +748,7 @@
             </div>
 
             <!-- Presente 25 - Kit Fondue -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Fondue" 
                     alt="Kit Fondue" 
                     class="w-full h-48 object-cover">
@@ -737,7 +768,7 @@
             </div>
 
             <!-- Presente 26 - Jogo de Copos -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Copos" 
                     alt="Jogo de Copos" 
                     class="w-full h-48 object-cover">
@@ -757,7 +788,7 @@
             </div>
 
             <!-- Presente 27 - Aparelho de Som -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Som" 
                     alt="Aparelho de Som" 
                     class="w-full h-48 object-cover">
@@ -777,7 +808,7 @@
             </div>
 
             <!-- Presente 28 - Noite no Hotel -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Hotel" 
                     alt="Noite no Hotel" 
                     class="w-full h-48 object-cover">
@@ -796,7 +827,7 @@
                 </div>
             </div>
             <!-- Presente 29 - Kit Lua de Mel em Casa -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Lua+Mel+Casa" 
                     alt="Kit Lua de Mel em Casa" 
                     class="w-full h-48 object-cover">
@@ -816,7 +847,7 @@
             </div>
 
             <!-- Presente 30 - Vale Experiência -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Experiencia" 
                     alt="Vale Experiência" 
                     class="w-full h-48 object-cover">
@@ -836,7 +867,7 @@
             </div>
 
             <!-- Presente 31 - Malas Combinando -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Malas" 
                     alt="Malas Combinando" 
                     class="w-full h-48 object-cover">
@@ -856,7 +887,7 @@
             </div>
 
             <!-- Presente 32 - Câmera à Prova d'Água -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="presente-lote-2 hidden bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img src="https://placehold.co/400x300/cccccc/666666?text=Camera+Agua" 
                     alt="Câmera à Prova d'Água" 
                     class="w-full h-48 object-cover">
@@ -875,6 +906,15 @@
                 </div>
             </div>
         </div>
+        <div class="w-full flex justify-center mb-20">
+            <button id="verMaisPresentes" 
+                    class="bg-white text-black py-4 px-12 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-300 inline-flex items-center gap-3">
+                <span id="textoVerMais">Ver Mais Presentes</span>
+                <svg class="w-6 h-6 transition-transform duration-300" id="setaVerMais" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+        <div>
         
         <!-- Área de Pagamento PIX - AGORA OCULTA POR PADRÃO -->
         <div id="areaPix" class="hidden bg-white p-8 md:p-12 shadow-lg border border-gray-200 max-w-2xl mx-auto">
@@ -1500,6 +1540,85 @@ carrossel.parentElement.addEventListener('mouseenter', () => {
 
 carrossel.parentElement.addEventListener('mouseleave', () => {
     iniciarAutoplay();
+});
+
+// ========================================
+// FUNCIONALIDADE "VER MAIS PRESENTES"
+// ========================================
+
+const btnVerMais = document.getElementById('verMaisPresentes');
+const textoVerMais = document.getElementById('textoVerMais');
+const setaVerMais = document.getElementById('setaVerMais');
+
+let estadoAtual = 0; // 0 = inicial, 1 = primeiro clique, 2 = segundo clique
+
+btnVerMais.addEventListener('click', function() {
+    if (estadoAtual === 0) {
+        // PRIMEIRO CLIQUE: Mostrar presentes 9-24 (lote 1 - 4 linhas)
+        const lote1 = document.querySelectorAll('.presente-lote-1');
+        
+        console.log('Primeiro clique - Mostrando lote 1:', lote1.length); // Debug
+        
+        lote1.forEach((presente, index) => {
+            // Remover a classe hidden
+            presente.classList.remove('hidden');
+            
+            // Adicionar animação com delay progressivo
+            setTimeout(() => {
+                presente.style.animation = 'fadeInUp 0.5s ease-out';
+                presente.style.opacity = '1';
+                presente.style.display = 'block';
+            }, index * 50); // Delay de 50ms entre cada item
+        });
+        
+        estadoAtual = 1;
+        textoVerMais.textContent = 'Ver Mais Presentes';
+        
+        // Scroll suave para os novos itens após animação
+        setTimeout(() => {
+            if (lote1.length > 0) {
+                lote1[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }, 300);
+        
+    } else if (estadoAtual === 1) {
+        // SEGUNDO CLIQUE: Mostrar presentes 25-32 (lote 2 - 2 linhas)
+        const lote2 = document.querySelectorAll('.presente-lote-2');
+        
+        console.log('Segundo clique - Mostrando lote 2:', lote2.length); // Debug
+        
+        lote2.forEach((presente, index) => {
+            // Remover a classe hidden
+            presente.classList.remove('hidden');
+            
+            // Adicionar animação com delay progressivo
+            setTimeout(() => {
+                presente.style.animation = 'fadeInUp 0.5s ease-out';
+                presente.style.opacity = '1';
+                presente.style.display = 'block';
+            }, index * 50);
+        });
+        
+        estadoAtual = 2;
+        
+        // Scroll suave para os novos itens
+        setTimeout(() => {
+            if (lote2.length > 0) {
+                lote2[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }, 300);
+        
+        // OCULTAR O BOTÃO (todos os presentes estão visíveis)
+        setTimeout(() => {
+            btnVerMais.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            btnVerMais.style.opacity = '0';
+            btnVerMais.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+                btnVerMais.style.display = 'none';
+            }, 300);
+        }, 600);
+    }
 });
     
 </script>
