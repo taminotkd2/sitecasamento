@@ -35,8 +35,12 @@
     
     /* Filtro grayscale para imagens */
     .grayscale-img {
-        filter: grayscale(100%);
+        filter: grayscale(0%);
     }
+    .indicador.active {
+    background-color: #000;
+    width: 2rem;
+    }   
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-white">
@@ -45,7 +49,8 @@
     <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
         <!-- Imagem de fundo em preto e branco -->
         <div class="absolute inset-0 z-0">
-            <img src="https://placehold.co/1920x1080/cccccc/666666?text=Caroline+%26+Tamino" 
+            <img src="https://i.imgur.com/J2iH8yw.png" 
+            
                  alt="Casal" 
                  class="w-full h-full object-cover grayscale-img">
             <div class="hero-overlay absolute inset-0"></div>
@@ -112,58 +117,809 @@
         </div>
     </section>
 
-<!-- SECÇÃO DETALHES DO EVENTO -->
-<section id="detalhes" class="py-20 px-4 bg-gray-50">
+<!-- SECÇÃO GALERIA DE FOTOS (CARROSSEL) -->
+<section id="galeria" class="py-12 px-4 bg-gray-50">
     <div class="max-w-6xl mx-auto">
-        <h2 class="font-serif text-5xl md:text-6xl text-center mb-16 text-black">
-            Detalhes do Evento
+        <h2 class="font-serif text-5xl md:text-6xl text-center mb-8 text-black">
+            Galeria
         </h2>
         
-        <div class="flex justify-center">
-            <!-- Cerimónia -->
-            <div class="bg-white p-8 shadow-lg border border-gray-200 max-w-lg w-full">
-                <h3 class="font-serif text-3xl mb-6 text-black">Cerimónia</h3>
-                <div class="space-y-4 text-gray-700">
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        <div>
-                            <p class="font-semibold">Data</p>
-                            <p>28 de Fevereiro de 2026</p>
-                        </div>
+        <!-- Carrossel -->
+        <div class="relative max-w-2xl mx-auto">
+            <!-- Container das imagens -->
+            <div class="overflow-hidden rounded-lg shadow-2xl bg-gray-200">
+                <div id="carrosselImagens" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Imagem 1 -->
+                    <div class="min-w-full">
+                        <img src="https://i.imgur.com/kxA2BcA.png" 
+                             alt="Foto 1" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
                     </div>
                     
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        <div>
-                            <p class="font-semibold">Hora</p>
-                            <p>15:00</p>
-                        </div>
+                    <!-- Imagem 2 -->
+                    <div class="min-w-full">
+                        <img src="https://placehold.co/1200x800/cccccc/666666?text=Foto+2" 
+                             alt="Foto 2" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
                     </div>
                     
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <div>
-                            <p class="font-semibold">Local</p>
-                            <p>Buffet Kasa de Campo</p>
-                            <p class="text-sm">Alameda dos Palmeiras - Residencial Iporão</p>
-                            <p class="text-sm">Mairiporã - SP, 07600-000</p>
-                        </div>
+                    <!-- Imagem 3 -->
+                    <div class="min-w-full">
+                        <img src="https://placehold.co/1200x800/cccccc/666666?text=Foto+3" 
+                             alt="Foto 3" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
+                    </div>
+                    
+                    <!-- Imagem 4 -->
+                    <div class="min-w-full">
+                        <img src="https://placehold.co/1200x800/cccccc/666666?text=Foto+4" 
+                             alt="Foto 4" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
+                    </div>
+                    
+                    <!-- Imagem 5 -->
+                    <div class="min-w-full">
+                        <img src="https://placehold.co/1200x800/cccccc/666666?text=Foto+5" 
+                             alt="Foto 5" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
+                    </div>
+                    
+                    <!-- Imagem 6 -->
+                    <div class="min-w-full">
+                        <img src="https://placehold.co/1200x800/cccccc/666666?text=Foto+6" 
+                             alt="Foto 6" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
+                    </div>
+                    
+                    <!-- Imagem 7 -->
+                    <div class="min-w-full">
+                        <img src="https://placehold.co/1200x800/cccccc/666666?text=Foto+7" 
+                             alt="Foto 7" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
+                    </div>
+                    
+                    <!-- Imagem 8 -->
+                    <div class="min-w-full">
+                        <img src="https://placehold.co/1200x800/cccccc/666666?text=Foto+8" 
+                             alt="Foto 8" 
+                             class="w-auto h-96 md:h-[700px] object-cover mx-auto">
                     </div>
                 </div>
-                
-                <a href="https://google.com/maps/place/Buffet+Kasa+de+Campo/@-23.3141767,-46.5603781,17z/data=!4m6!3m5!1s0x94ceed5ed19998ad:0x3aa54957bdccb4d!8m2!3d-23.3141767!4d-46.5603781!16s%2Fg%2F11q1sbrqtk?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" 
-                   target="_blank"
-                   class="mt-6 block w-full text-center bg-black text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                    Ver no Mapa
-                </a>
             </div>
+            
+            <!-- Botão Anterior -->
+            <button id="btnAnterior" 
+                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-4 rounded-full transition-all duration-300 btn-hover">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            
+            <!-- Botão Próximo -->
+            <button id="btnProximo" 
+                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-4 rounded-full transition-all duration-300 btn-hover">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Indicadores (bolinhas) -->
+            <div class="flex justify-center gap-2 mt-8">
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors active" data-index="0"></button>
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors" data-index="1"></button>
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors" data-index="2"></button>
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors" data-index="3"></button>
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors" data-index="4"></button>
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors" data-index="5"></button>
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors" data-index="6"></button>
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors" data-index="7"></button>
+            </div>
+            
+            <!-- Contador -->
+            <p class="text-center mt-4 text-gray-600 font-medium">
+                <span id="imagemAtual">1</span> / <span id="totalImagens">8</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECÇÃO LISTA DE PRESENTES -->
+<section id="presentes" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="font-serif text-5xl md:text-6xl text-center mb-8 text-black">
+            Lista de Presentes
+        </h2>
+        <p class="text-center text-gray-600 mb-16 text-lg max-w-2xl mx-auto">
+            A sua presença é o nosso maior presente! Mas se desejar contribuir para nossa nova vida, 
+            escolha um dos presentes abaixo.
+        </p>
+        
+        <!-- Grid de Presentes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            
+            <!-- Presente 1-->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Kit+Sobrevivencia" 
+                    alt="Kit Sobrevivência a Dois" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Kit "Sobrevivência a Dois"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Vinho, vela, snack e plaquinha "não perturbe" pra curtir o caos a dois. 🍷🕯️
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 150,00</p>
+                    <button onclick="selecionarPresente('Kit Sobrevivência a Dois', 150.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Presente 2 - Noite do Filme -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Noite+Filme" 
+                    alt="Noite do Filme + Pijama" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Noite do Filme + Pijama Combinando
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Pipoca, manta e o desafio: não dormir no meio do filme. 🎬
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 280,00</p>
+                    <button onclick="selecionarPresente('Noite do Filme + Pijama Combinando', 280.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 3 - Máquina de Café -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Maquina+Cafe" 
+                    alt="Máquina de Café" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Máquina de Café dos Sonhos
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Porque o amor precisa de cafeína pra funcionar. ☕❤️
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 1.200,00</p>
+                    <button onclick="selecionarPresente('Máquina de Café dos Sonhos', 1200.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 4 - Jogo de Taças -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Tacas" 
+                    alt="Jogo de Taças" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Jogo de Taças "Amor e Caos"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Um brinde ao amor (e outro à paciência). 🥂
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 190,00</p>
+                    <button onclick="selecionarPresente('Jogo de Taças Amor e Caos', 190.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 5 - Aula de Dança -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Danca" 
+                    alt="Aula de Dança" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Aula de Dança a Dois
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Pra aprender a dançar sem pisar no pé (muito). 💃🕺
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 300,00</p>
+                    <button onclick="selecionarPresente('Aula de Dança a Dois', 300.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 6 - Streaming + Pipoca -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Streaming" 
+                    alt="Assinatura Streaming" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Assinatura de Streaming + Pipoca Gourmet
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        O pacote completo pra virar refém do sofá. 📺
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 200,00</p>
+                    <button onclick="selecionarPresente('Assinatura de Streaming + Pipoca Gourmet', 200.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 7 - Sessão de Massagem -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Massagem" 
+                    alt="Sessão de Massagem" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Sessão de Massagem "Socorro, Casamos!"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Relaxar antes que alguém peça o divórcio. 💆‍♀️💆‍♂️
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 450,00</p>
+                    <button onclick="selecionarPresente('Sessão de Massagem Socorro, Casamos!', 450.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 8 - Lençóis Egípcios -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Lencois" 
+                    alt="Jogo de Lençóis" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Jogo de Lençóis Egípcios
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Conforto digno de realeza (e cochilos sem culpa). 😴
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 600,00</p>
+                    <button onclick="selecionarPresente('Jogo de Lençóis Egípcios', 600.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 9 - Kit Café na Cama -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Cafe+Cama" 
+                    alt="Kit Café na Cama" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Kit Café na Cama
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Bandeja, bule e muito amor pra começar o dia bem. ☕💞
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 350,00</p>
+                    <button onclick="selecionarPresente('Kit Café na Cama', 350.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 10 - Robô Aspirador -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Robo" 
+                    alt="Robô Aspirador" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Robô Aspirador "Amor Não Varre Poeira"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        O terceiro integrante do casal. 🤖
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 1.800,00</p>
+                    <button onclick="selecionarPresente('Robô Aspirador Amor Não Varre Poeira', 1800.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 11 - Jogo de Panelas -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Panelas" 
+                    alt="Jogo de Panelas" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Jogo de Panelas "Chef e Degustador"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Um cozinha, o outro aplaude. 🍳
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 750,00</p>
+                    <button onclick="selecionarPresente('Jogo de Panelas Chef e Degustador', 750.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 12 - Curso de Drinks -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Drinks" 
+                    alt="Curso de Drinks" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Curso de Drinks + Kit Bartender
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Pra transformar brigas em brindes. 🍸
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 490,00</p>
+                    <button onclick="selecionarPresente('Curso de Drinks + Kit Bartender', 490.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+            <!-- Presente 13 - Vale Viagem -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Viagem" 
+                    alt="Vale Viagem" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Vale Viagem "Fugindo dos Parentes"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Um final de semana de paz (ou quase). 🏞️
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 1.200,00</p>
+                    <button onclick="selecionarPresente('Vale Viagem Fugindo dos Parentes', 1200.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 14 - Máquina de Waffle -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Waffle" 
+                    alt="Máquina de Waffle" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Máquina de Waffle + Maple Syrup Canadense
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Café da manhã digno de Pinterest. 🧇
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 250,00</p>
+                    <button onclick="selecionarPresente('Máquina de Waffle + Maple Syrup Canadense', 250.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 15 - Jogo Desafio do Casal -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Jogo+Casal" 
+                    alt="Jogo Desafio do Casal" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Jogo "Desafio do Casal"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Teste quem tem mais paciência (ou humor). 💬❤️
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 120,00</p>
+                    <button onclick="selecionarPresente('Jogo Desafio do Casal', 120.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 16 - Toalhas Bordadas -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Toalhas" 
+                    alt="Toalhas Bordadas" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Toalhas Bordadas "Lado Dela / Lado Quase Dele"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        A real divisão do amor. 🛁
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 200,00</p>
+                    <button onclick="selecionarPresente('Toalhas Bordadas Lado Dela / Lado Quase Dele', 200.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 17 - Câmera Instantânea -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Camera" 
+                    alt="Câmera Instantânea" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Câmera Instantânea + Álbum "Nosso Caos Organizado"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Porque cada foto é uma história (ou uma discussão). 📸
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 850,00</p>
+                    <button onclick="selecionarPresente('Câmera Instantânea + Álbum Nosso Caos Organizado', 850.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+            <!-- Presente 18 - Luminária Inteligente -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Luminaria" 
+                    alt="Luminária Inteligente" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Luminária de Cabeceira Inteligente
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Luz certa pra tudo: romance, leitura ou tretinha. 💡
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 380,00</p>
+                    <button onclick="selecionarPresente('Luminária de Cabeceira Inteligente', 380.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 19 - Primeiro Jantar -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Jantar" 
+                    alt="Primeiro Jantar em Casa" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Caixa "Primeiro Jantar em Casa Nova"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Vinho, queijo e playlist: a receita do amor. 🍷🧀
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 280,00</p>
+                    <button onclick="selecionarPresente('Caixa Primeiro Jantar em Casa Nova', 280.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 20 - Tapete -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Tapete" 
+                    alt="Tapete Bem-vindo" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Tapete "Bem-vindo ao Caos"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        O aviso mais sincero da casa. 😂
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 90,00</p>
+                    <button onclick="selecionarPresente('Tapete Bem-vindo ao Caos', 90.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 21 - Difusor de Aromas -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Difusor" 
+                    alt="Difusor de Aromas" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Difusor de Aromas "Cheiro de Lar"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        A casa cheirando amor (e café). ☕🌿
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 150,00</p>
+                    <button onclick="selecionarPresente('Difusor de Aromas Cheiro de Lar', 150.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 22 - Mini Projetor -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Projetor" 
+                    alt="Mini Projetor" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Mini Projetor "Cinema no Quarto"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Sessão exclusiva a dois, sem fila nem pipoca cara. 🎬
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 1.000,00</p>
+                    <button onclick="selecionarPresente('Mini Projetor Cinema no Quarto', 1000.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 23 - Vale Pizza -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Pizza" 
+                    alt="Vale Pizza" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Vale Pizza + Pijama + Preguiça
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        A trindade sagrada do relacionamento. 🍕
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 160,00</p>
+                    <button onclick="selecionarPresente('Vale Pizza + Pijama + Preguiça', 160.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 24 - Pratos Irônicos -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Pratos" 
+                    alt="Pratos com Frases" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Conjunto de Pratos com Frases Irônicas
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        "Ele cozinhou! Milagre!" 🍽️
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 280,00</p>
+                    <button onclick="selecionarPresente('Conjunto de Pratos com Frases Irônicas', 280.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 25 - Kit Fondue -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Fondue" 
+                    alt="Kit Fondue" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Kit Fondue + Vinho
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Perfeito pra noites frias (e corações quentes). 🍫🍷
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 300,00</p>
+                    <button onclick="selecionarPresente('Kit Fondue + Vinho', 300.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 26 - Jogo de Copos -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Copos" 
+                    alt="Jogo de Copos" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Jogo de Copos "Terapia de Casal Líquida"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Brindes e risadas inclusos. 🍹
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 140,00</p>
+                    <button onclick="selecionarPresente('Jogo de Copos Terapia de Casal Líquida', 140.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 27 - Aparelho de Som -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Som" 
+                    alt="Aparelho de Som" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Aparelho de Som "Festa na Sala"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Porque todo dia pode ser sexta. 🎶
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 700,00</p>
+                    <button onclick="selecionarPresente('Aparelho de Som Festa na Sala', 700.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 28 - Noite no Hotel -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Hotel" 
+                    alt="Noite no Hotel" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Vale "Noite no Hotel Romântico"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Amor, banheira e zero louça. 🛁
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 2.000,00</p>
+                    <button onclick="selecionarPresente('Vale Noite no Hotel Romântico', 2000.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+            <!-- Presente 29 - Kit Lua de Mel em Casa -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Lua+Mel+Casa" 
+                    alt="Kit Lua de Mel em Casa" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Kit "Lua de Mel em Casa"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Pétalas, velas, espumante e clima de paraíso particular. 😏
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 320,00</p>
+                    <button onclick="selecionarPresente('Kit Lua de Mel em Casa', 320.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 30 - Vale Experiência -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Experiencia" 
+                    alt="Vale Experiência" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Vale Experiência na Lua de Mel
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Um jantar, passeio ou surpresa no destino. 🌴🍽️
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 600,00</p>
+                    <button onclick="selecionarPresente('Vale Experiência na Lua de Mel', 600.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 31 - Malas Combinando -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Malas" 
+                    alt="Malas Combinando" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Malas Combinando
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Prontas pra viajar e confundir as bagagens. 🧳💑
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 950,00</p>
+                    <button onclick="selecionarPresente('Malas Combinando', 950.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Presente 32 - Câmera à Prova d'Água -->
+            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/400x300/cccccc/666666?text=Camera+Agua" 
+                    alt="Câmera à Prova d'Água" 
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl mb-2 text-black leading-tight">
+                        Câmera à Prova d'Água pra Lua de Mel
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed min-h-[3rem]">
+                        Registre mergulhos, aventuras e amor molhado. 🌊📸
+                    </p>
+                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 1.400,00</p>
+                    <button onclick="selecionarPresente('Câmera à Prova d\'Água pra Lua de Mel', 1400.00)" 
+                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Presentear
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Área de Pagamento PIX - AGORA OCULTA POR PADRÃO -->
+        <div id="areaPix" class="hidden bg-white p-8 md:p-12 shadow-lg border border-gray-200 max-w-2xl mx-auto">
+            <!-- Presente Selecionado -->
+            <div id="presenteSelecionado" class="mb-8 p-4 bg-gray-100 border-l-4 border-black">
+                <p class="text-sm uppercase tracking-wide text-gray-600 mb-1 font-semibold">Presente Selecionado</p>
+                <p id="nomePresente" class="text-xl font-serif text-black mb-1"></p>
+                <p id="valorPresente" class="text-2xl font-bold text-black"></p>
+            </div>
+            
+            <h3 class="font-serif text-3xl mb-6 text-black text-center">Contribua via PIX</h3>
+            
+            <!-- QR Code -->
+            <div class="mb-6">
+                <img src="https://placehold.co/200x200/cccccc/666666?text=QR+Code+PIX" 
+                     alt="QR Code PIX" 
+                     class="mx-auto grayscale-img">
+            </div>
+            
+            <!-- Chave PIX -->
+            <div class="mb-6">
+                <p class="text-sm uppercase tracking-wide text-gray-600 mb-2 font-semibold text-center">Chave PIX (Celular)</p>
+                <p id="chavePix" class="text-2xl font-mono text-black mb-4 text-center">11957778291</p>
+                
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="copiarPix" 
+                            class="flex-1 bg-black text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                        Copiar Chave PIX
+                    </button>
+                    
+                    <button id="copiarValor" 
+                            class="flex-1 bg-gray-800 text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-700">
+                        Copiar Valor
+                    </button>
+                </div>
+                
+                <!-- Mensagens de copiado -->
+                <p id="pixCopiado" class="hidden mt-3 text-green-700 font-medium text-center">✓ Chave PIX copiada!</p>
+                <p id="valorCopiado" class="hidden mt-3 text-green-700 font-medium text-center">✓ Valor copiado!</p>
+            </div>
+            
+            <p class="text-sm text-gray-600 italic text-center mb-8">
+                Qualquer valor será recebido com muito carinho ♥
+            </p>
+            
         </div>
     </div>
 </section>
@@ -238,272 +994,6 @@
         </div>
     </section>
 
-<!-- SECÇÃO LISTA DE PRESENTES -->
-<section id="presentes" class="py-20 px-4 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="font-serif text-5xl md:text-6xl text-center mb-8 text-black">
-            Lista de Presentes
-        </h2>
-        <p class="text-center text-gray-600 mb-16 text-lg max-w-2xl mx-auto">
-            A sua presença é o nosso maior presente! Mas se desejar contribuir para nossa nova vida, 
-            escolha um dos presentes abaixo.
-        </p>
-        
-        <!-- Grid de Presentes - AJUSTADO PARA 4 COLUNAS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-            
-            <!-- Presente 1 -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Passagens+Aereas" 
-                     alt="Passagens Aéreas" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Passagens Aéreas da Lua de Mel</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 2.000,00</p>
-                    <button onclick="selecionarPresente('Passagens Aéreas da Lua de Mel', 2000.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Presente 2 -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Diaria+Hotel" 
-                     alt="Diária no Hotel" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Diária no Hotel</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 750,00</p>
-                    <button onclick="selecionarPresente('Diária no Hotel', 750.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Presente 3 -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Jantar+Romantico" 
-                     alt="Jantar Romântico" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Jantar Romântico na Lua de Mel</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 300,00</p>
-                    <button onclick="selecionarPresente('Jantar Romântico na Lua de Mel', 300.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Presente 4 -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Passeio+Barco" 
-                     alt="Passeio de Barco" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Passeio de Barco</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 500,00</p>
-                    <button onclick="selecionarPresente('Passeio de Barco', 500.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 5 - Cota para o Enxoval -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Enxoval" 
-                     alt="Cota Enxoval" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Cota para o Enxoval</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 75,00</p>
-                    <button onclick="selecionarPresente('Cota para o Enxoval (Cama, Mesa e Banho)', 75.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 6 - Conjunto de Panelas -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Panelas" 
-                     alt="Conjunto de Panelas" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Conjunto de Panelas MasterChef</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 250,00</p>
-                    <button onclick="selecionarPresente('Conjunto de Panelas MasterChef', 250.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 7 - Plantinha -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Planta" 
-                     alt="Plantinha para Casa" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Plantinha para a Casa</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 50,00</p>
-                    <button onclick="selecionarPresente('Plantinha para a Casa', 50.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 8 - Cota Decoração -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Decoracao" 
-                     alt="Cota Decoração" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Cota para Decoração dos Sonhos</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 125,00</p>
-                    <button onclick="selecionarPresente('Cota para a Decoração dos Sonhos', 125.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 9 - SPA -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=SPA" 
-                     alt="Dia de SPA" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Um Dia de SPA na Lua de Mel</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 450,00</p>
-                    <button onclick="selecionarPresente('Um Dia de SPA na Lua de Mel', 450.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 10 - Carro Conversível -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Carro" 
-                     alt="Aluguel de Carro" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Aluguel de Carro Conversível</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 500,00</p>
-                    <button onclick="selecionarPresente('Aluguel de um Carro Conversível (por um dia!)', 500.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 11 - Fundo de Emergência -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Emergencia" 
-                     alt="Fundo de Emergência" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Fundo de Emergência "Quebrei, e agora?"</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 80,00</p>
-                    <button onclick="selecionarPresente('Fundo de Emergência Quebrei, e agora?', 80.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-
-            <!-- Presente 12 - Streaming -->
-            <div class="bg-white border border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="https://placehold.co/400x300/cccccc/666666?text=Streaming" 
-                     alt="Assinatura Streaming" 
-                     class="w-full h-48 object-cover grayscale-img">
-                <div class="p-6">
-                    <h3 class="font-serif text-xl mb-3 text-black min-h-[3.5rem]">Assinatura de Streaming (1 Ano)</h3>
-                    <p class="text-2xl font-semibold mb-4 text-gray-800">R$ 180,00</p>
-                    <button onclick="selecionarPresente('Um Ano de Assinatura de Streaming', 180.00)" 
-                            class="w-full bg-black text-white py-3 px-4 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Presentear
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Área de Pagamento PIX -->
-        <div id="areaPix" class="bg-white p-8 md:p-12 shadow-lg border border-gray-200 max-w-2xl mx-auto">
-            <!-- Presente Selecionado -->
-            <div id="presenteSelecionado" class="hidden mb-8 p-4 bg-gray-100 border-l-4 border-black">
-                <p class="text-sm uppercase tracking-wide text-gray-600 mb-1 font-semibold">Presente Selecionado</p>
-                <p id="nomePresente" class="text-xl font-serif text-black mb-1"></p>
-                <p id="valorPresente" class="text-2xl font-bold text-black"></p>
-            </div>
-            
-            <h3 class="font-serif text-3xl mb-6 text-black text-center">Contribua via PIX</h3>
-            
-            <!-- QR Code -->
-            <div class="mb-6">
-                <img src="https://placehold.co/200x200/cccccc/666666?text=QR+Code+PIX" 
-                     alt="QR Code PIX" 
-                     class="mx-auto grayscale-img">
-            </div>
-            
-            <!-- Chave PIX -->
-            <div class="mb-6">
-                <p class="text-sm uppercase tracking-wide text-gray-600 mb-2 font-semibold text-center">Chave PIX (Celular)</p>
-                <p id="chavePix" class="text-2xl font-mono text-black mb-4 text-center">11957778291</p>
-                
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <button id="copiarPix" 
-                            class="flex-1 bg-black text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
-                        Copiar Chave PIX
-                    </button>
-                    
-                    <button id="copiarValor" 
-                            class="hidden flex-1 bg-gray-800 text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-700">
-                        Copiar Valor
-                    </button>
-                </div>
-                
-                <!-- Mensagens de copiado -->
-                <p id="pixCopiado" class="hidden mt-3 text-green-700 font-medium text-center">✓ Chave PIX copiada!</p>
-                <p id="valorCopiado" class="hidden mt-3 text-green-700 font-medium text-center">✓ Valor copiado!</p>
-            </div>
-            
-            <p class="text-sm text-gray-600 italic text-center mb-8">
-                Qualquer valor será recebido com muito carinho ♥
-            </p>
-            
-            <!-- Enviar Comprovante -->
-            <div class="border-t border-gray-200 pt-8">
-                <h4 class="font-serif text-2xl mb-4 text-black text-center">Enviar Comprovante (Opcional)</h4>
-                <p class="text-sm text-gray-600 mb-6 text-center">
-                    Se desejar, pode enviar o comprovante da sua transferência
-                </p>
-                
-                <div class="text-center">
-                    <label for="fileUpload" class="inline-block bg-gray-800 text-white py-3 px-8 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-700 cursor-pointer">
-                        <svg class="inline-block w-5 h-5 mr-2 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                        </svg>
-                        Anexar Comprovante
-                    </label>
-                    <input type="file" 
-                           id="fileUpload" 
-                           accept="image/*,application/pdf" 
-                           class="hidden"
-                           onchange="mostrarNomeArquivo(this)">
-                    
-                    <p id="nomeArquivo" class="mt-4 text-sm text-gray-600 italic"></p>
-                    <p id="arquivoSucesso" class="hidden mt-4 text-green-700 font-medium">✓ Comprovante anexado com sucesso!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
  <!-- SECÇÃO MURAL DE MENSAGENS -->
 <section id="mensagens" class="py-20 px-4 bg-white">
@@ -565,65 +1055,63 @@
     </div>
 </section>
 
-    <!-- SECÇÃO GALERIA DE FOTOS -->
-    <section id="galeria" class="py-20 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-5xl md:text-6xl text-center mb-16 text-black">
-                Galeria
-            </h2>
-            
-            <!-- Grid de fotos -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+1" 
-                         alt="Foto 1" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
+<!-- SECÇÃO DETALHES DO EVENTO -->
+<section id="detalhes" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="font-serif text-5xl md:text-6xl text-center mb-16 text-black">
+            Detalhes do Evento
+        </h2>
+        
+        <div class="flex justify-center">
+            <!-- Cerimónia -->
+            <div class="bg-white p-8 shadow-lg border border-gray-200 max-w-lg w-full">
+                <h3 class="font-serif text-3xl mb-6 text-black">Cerimónia</h3>
+                <div class="space-y-4 text-gray-700">
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold">Data</p>
+                            <p>28 de Fevereiro de 2026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold">Hora</p>
+                            <p>15:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold">Local</p>
+                            <p>Buffet Kasa de Campo</p>
+                            <p class="text-sm">Alameda dos Palmeiras - Residencial Iporão</p>
+                            <p class="text-sm">Mairiporã - SP, 07600-000</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+2" 
-                         alt="Foto 2" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
-                </div>
-                
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+3" 
-                         alt="Foto 3" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
-                </div>
-                
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+4" 
-                         alt="Foto 4" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
-                </div>
-                
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+5" 
-                         alt="Foto 5" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
-                </div>
-                
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+6" 
-                         alt="Foto 6" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
-                </div>
-                
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+7" 
-                         alt="Foto 7" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
-                </div>
-                
-                <div class="overflow-hidden aspect-square">
-                    <img src="https://placehold.co/400x400/cccccc/666666?text=Foto+8" 
-                         alt="Foto 8" 
-                         class="w-full h-full object-cover grayscale-img hover:scale-110 transition-transform duration-500 cursor-pointer">
-                </div>
+                <a href="https://google.com/maps/place/Buffet+Kasa+de+Campo/@-23.3141767,-46.5603781,17z/data=!4m6!3m5!1s0x94ceed5ed19998ad:0x3aa54957bdccb4d!8m2!3d-23.3141767!4d-46.5603781!16s%2Fg%2F11q1sbrqtk?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" 
+                   target="_blank"
+                   class="mt-6 block w-full text-center bg-black text-white py-3 px-6 font-medium uppercase tracking-wide transition-all duration-300 btn-hover hover:bg-gray-800">
+                    Ver no Mapa
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <!-- RODAPÉ -->
     <footer class="bg-black text-white py-12 px-4">
@@ -710,29 +1198,32 @@ rsvpForm.addEventListener('submit', function(e) {
     });
 });
     
-    // ========================================
-    // SELECIONAR PRESENTE
-    // ========================================
+// ========================================
+// SELECIONAR PRESENTE
+// ========================================
+
+let valorPresenteSelecionado = 0;
+
+function selecionarPresente(nome, valor) {
+    valorPresenteSelecionado = valor;
     
-    let valorPresenteSelecionado = 0;
+    // Mostrar área PIX (remove a classe hidden)
+    document.getElementById('areaPix').classList.remove('hidden');
     
-    function selecionarPresente(nome, valor) {
-        valorPresenteSelecionado = valor;
-        
-        // Mostrar área de presente selecionado
-        document.getElementById('presenteSelecionado').classList.remove('hidden');
-        document.getElementById('nomePresente').textContent = nome;
-        document.getElementById('valorPresente').textContent = `R$ ${valor.toFixed(2).replace('.', ',')}`;
-        
-        // Mostrar botão de copiar valor
-        document.getElementById('copiarValor').classList.remove('hidden');
-        
-        // Rolar suavemente até a área PIX
-        document.getElementById('areaPix').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
+    // Mostrar área de presente selecionado
+    document.getElementById('presenteSelecionado').classList.remove('hidden');
+    document.getElementById('nomePresente').textContent = nome;
+    document.getElementById('valorPresente').textContent = `R$ ${valor.toFixed(2).replace('.', ',')}`;
+    
+    // Mostrar botão de copiar valor
+    document.getElementById('copiarValor').classList.remove('hidden');
+    
+    // Rolar suavemente até a área PIX
+    document.getElementById('areaPix').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
     
     // ========================================
     // COPIAR CHAVE PIX
@@ -881,6 +1372,134 @@ mensagemForm.addEventListener('submit', function(e) {
         btnEnviar.textContent = textoOriginal;
         btnEnviar.disabled = false;
     });
+});
+
+// ========================================
+// CARROSSEL DE GALERIA
+// ========================================
+
+const carrossel = document.getElementById('carrosselImagens');
+const btnAnterior = document.getElementById('btnAnterior');
+const btnProximo = document.getElementById('btnProximo');
+const indicadores = document.querySelectorAll('.indicador');
+const imagemAtualEl = document.getElementById('imagemAtual');
+const totalImagensEl = document.getElementById('totalImagens');
+
+let indexAtual = 0;
+const totalImagens = carrossel.children.length;
+let autoplayInterval;
+
+// Atualizar total de imagens
+totalImagensEl.textContent = totalImagens;
+
+// Função para mostrar imagem
+function mostrarImagem(index) {
+    // Garantir que o índice está dentro dos limites
+    if (index < 0) {
+        indexAtual = totalImagens - 1;
+    } else if (index >= totalImagens) {
+        indexAtual = 0;
+    } else {
+        indexAtual = index;
+    }
+    
+    // Mover o carrossel
+    const deslocamento = -indexAtual * 100;
+    carrossel.style.transform = `translateX(${deslocamento}%)`;
+    
+    // Atualizar contador
+    imagemAtualEl.textContent = indexAtual + 1;
+    
+    // Atualizar indicadores
+    indicadores.forEach((indicador, i) => {
+        if (i === indexAtual) {
+            indicador.classList.add('active');
+        } else {
+            indicador.classList.remove('active');
+        }
+    });
+}
+
+// Botão anterior
+btnAnterior.addEventListener('click', () => {
+    mostrarImagem(indexAtual - 1);
+    resetarAutoplay();
+});
+
+// Botão próximo
+btnProximo.addEventListener('click', () => {
+    mostrarImagem(indexAtual + 1);
+    resetarAutoplay();
+});
+
+// Indicadores (bolinhas)
+indicadores.forEach((indicador) => {
+    indicador.addEventListener('click', () => {
+        const index = parseInt(indicador.getAttribute('data-index'));
+        mostrarImagem(index);
+        resetarAutoplay();
+    });
+});
+
+// Suporte para teclado (setas)
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        mostrarImagem(indexAtual - 1);
+        resetarAutoplay();
+    } else if (e.key === 'ArrowRight') {
+        mostrarImagem(indexAtual + 1);
+        resetarAutoplay();
+    }
+});
+
+// Suporte para touch/swipe em mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+carrossel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+carrossel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    if (touchEndX < touchStartX - 50) {
+        // Swipe para esquerda (próxima)
+        mostrarImagem(indexAtual + 1);
+        resetarAutoplay();
+    }
+    if (touchEndX > touchStartX + 50) {
+        // Swipe para direita (anterior)
+        mostrarImagem(indexAtual - 1);
+        resetarAutoplay();
+    }
+}
+
+// Autoplay (troca automática a cada 5 segundos)
+function iniciarAutoplay() {
+    autoplayInterval = setInterval(() => {
+        mostrarImagem(indexAtual + 1);
+    }, 5000); // 5000ms = 5 segundos
+}
+
+function resetarAutoplay() {
+    clearInterval(autoplayInterval);
+    iniciarAutoplay();
+}
+
+// Iniciar autoplay quando carregar
+iniciarAutoplay();
+
+// Pausar autoplay quando o mouse estiver sobre o carrossel
+carrossel.parentElement.addEventListener('mouseenter', () => {
+    clearInterval(autoplayInterval);
+});
+
+carrossel.parentElement.addEventListener('mouseleave', () => {
+    iniciarAutoplay();
 });
     
 </script>
